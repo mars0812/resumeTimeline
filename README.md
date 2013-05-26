@@ -224,9 +224,9 @@
 
 ---
 
-    证书：
-        [高级软件工程师](http://img0.ph.126.net/s5q_DeIbV7_Il6T0GdklbA==/3281435278592863269.jpg)
-        [高级数据库管理工程师](http://img0.ph.126.net/Dx2ulOJ1o-vcs9U6lPNWHw==/124974889759587201.jpg)
+证书：
+    [高级软件工程师](http://img0.ph.126.net/s5q_DeIbV7_Il6T0GdklbA==/3281435278592863269.jpg)
+    [高级数据库管理工程师](http://img0.ph.126.net/Dx2ulOJ1o-vcs9U6lPNWHw==/124974889759587201.jpg)
 
 
 
