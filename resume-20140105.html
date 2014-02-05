@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"><title>Textdown Preview</title><script src="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/javascript/2/add_popup_topline.js"></script><script src="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/javascript/3/marked.js"></script><script src="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/javascript/2/setup_marked.js"></script><script src="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/javascript/3/mousetrap.js"></script><script src="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/javascript/2/insert_preview_css.js"></script><script src="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/javascript/preview.js"></script><style id="preview_css">body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+  table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}* { max-width: 100%; }</style></head><body><div><h1><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#ymm-iconhttp:img1.ph.126.netzisegd1wolutquwlkpwppw6597645910751332822.jpg----" name="ymm-iconhttp:img1.ph.126.netzisegd1wolutquwlkpwppw6597645910751332822.jpg----"></a><img src="./resource_files/6597645910751332822.jpg" alt="ymm icon">    叶明敏的简历</h1>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>个人信息:</h3>
+<hr>
+<pre><code>姓名:    叶明敏
+性别:    男
+年龄:    25
+手机号码: 13621712247
+电子邮件: ymm.812@gmail.com
+所在地区: 上海
+婚姻状况: 未婚
+工作年限: 3 年
+最高学历: 本科
+是否统招: 是
+目前状态: 在职, 看看新机会</code></pre>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>职业意向:</h3>
+<hr>
+<pre><code>期望行业: 计算机软件
+期望职位: 高级软件工程师, 项目执行·协调人员
+期望地点: 上海
+期望月薪: 面议/月</code></pre>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>工作经历:</h3>
+<hr>
+<p><strong>2013.05 - 至今 <a href="http://www.yidatec.com/ch/main.asp" target="_blank"><code>亿达信息技术有限公司</code></a></strong></p>
+<pre><code>公司描述:
+        客户至上 结果导向 精工细作 拼搏进取 协同发展
+公司性质:
+        私营·民营企业
+公司规模:
+        2000-5000 人
+公司行业:
+        IT服务/系统集成
+职位名称:
+        高级手机开发工程师
+薪酬状况:
+        10000 元/月
+工作地点:
+        上海
+所在部门:
+        移动电子商务部
+汇报对象:
+        部长
+下属人数:
+        0 人
+工作职责:
+        1. 参与iOS项目详细设计
+        2. 开发iOS项目
+工作业绩:
+        1. 完成 银联随行 `卡惠模块`   的开发
+        2. 完成 银联随行 `我的收藏`   的开发
+        3. 完成 银联随行 `我的订单`   的开发
+        4. 完成 银联随行 `我的银行卡` 的开发
+        5. 完成 银联随行 `我的对账单` 的开发
+        6. 完成 银联随行 `通讯录插件` 的开发</code></pre>
+<p><strong>2012.12 - 2013.05 <a href="http://www.morningtec.cn/" target="_blank"><code>YEECCO</code></a></strong></p>
+<pre><code>公司描述:
+        公司由两名毕业于英国剑桥大学的海归学子创立而成;
+        公司的核心产品StellaSDK为移动APP开发提供跨平台解决方案.
+公司性质:
+        私营·民营企业
+公司规模:
+        1-49 人
+公司行业:
+        计算机软件
+职位名称:
+        软件工程师
+薪酬状况:
+        8000 元/月
+工作地点:
+        上海
+所在部门:
+        软件部门
+汇报对象:
+        项目总监
+下属人数:
+        3 人
+工作职责:
+        1. 开发IOS项目
+        2. 开发StellaRunTime中的libObj2s
+        3. 开发StellaRunTime中的libDispatch
+        4. 开发StellaKit中的NavigationController和NavigationBar
+        5. 移植cocos2dV2
+工作业绩:
+        1. 完成多个IOS项目开发
+        2. 开发StellaSDK的核心模块</code></pre>
+<p><strong>2011.04 - 2012.12 <a href="http://www.asiainfo-linkage.com.cn/" target="_blank"><code>亚信联创</code></a></strong></p>
+<pre><code>公司描述:
+        亚信联创股份有限公司(Asiainfo-Linkage,Inc.NASDAQ 代码: ASIA)
+        由亚信集团股份有限公司和联创科技(南京)有限公司宣布合并而成,
+        是中国最大,全球收入和市值均第二大的电信BSS/OSS提供商.
+公司性质:
+        外商独资·外企办事处
+公司规模:
+        10000 人以上
+公司行业:
+        IT服务·系统集成
+职位名称:
+        开发工程师
+薪酬状况:
+        7000 元/月
+工作地点:
+        上海
+所在部门:
+        CRM1
+汇报对象:
+        项目经理
+下属人数:
+        2 人
+工作职责:
+        1. 上海联通BSS系统开发
+        2. 空中营业厅客户端维护
+        3. Oracle数据库维护
+工作业绩:
+        1. 完成联通iPhone合约功能的开发
+        2. 完成银联支付验证接口的开发
+        3. 完成BSS中联通资料管理系统的开发
+        4. 完成联通产品配置系统的开发
+        5. 完成联通空中营业厅App通信模块的开发</code></pre>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>项目经历:</h3>
+<hr>
+<p><strong>2014.01 - 2014.02 <a href="https://itunes.apple.com/us/app/makedecisions/id814963857?ls=1&mt=8" target="_blank"><code>做决定</code></a></strong></p>
+<pre><code>项目职务:
+        N/A
+所在公司:
+        个人
+项目描述:
+        每件事若你有好几个选项的话, 你会纠结不清; 若你不清楚风险的话, 你也会犹豫不决;
+        `做决定`这个App希望你能尽可能的把握风险, 选择最佳的选项.
+项目职责:
+        策划 设计 美工 开发 测试 上线 市场推广
+项目业绩:
+        N/A</code></pre>
+<p><strong>2013.05 - 2013.12 <a href="https://itunes.apple.com/cn/app/yin-lian-sui-xing/id433602054?mt=8&ls=1" target="_blank"><code>银联随行</code></a></strong></p>
+<pre><code>项目职务:
+        高级手机开发工程师
+所在公司:
+        亿达信息技术有限公司
+项目描述:
+        银联的移动支付客户端
+项目职责:
+        开发 `卡惠` `我的收藏` `我的银行卡` `我的对账单` `我的订单` 模块
+项目业绩:
+        1. 完成 银联随行 `卡惠模块`   的开发
+        2. 完成 银联随行 `我的收藏`   的开发
+        3. 完成 银联随行 `我的银行卡` 的开发
+        4. 完成 银联随行 `我的对账单` 的开发
+        5. 完成 银联随行 `我的订单`   的开发
+        6. 完成 银联随行 `通讯录插件` 的开发</code></pre>
+<p><strong>2013.05 - 2013.06 <a href="https://itunes.apple.com/us/app/justdoit-jiu-shita/id644928674?ls=1&mt=8" target="_blank"><code>justDoIT</code></a></strong></p>
+<pre><code>项目职务:
+        N/A
+所在公司:
+        个人
+项目描述:
+        曾经为了中午吃什么而写的App, 已在`App Store`上架; 点击上面连接下载应用.
+项目职责:
+        策划 设计 美工 开发 测试 上线 市场推广
+项目业绩:
+        N/A</code></pre>
+<p><strong>2012.12 - 2013.05 <a href="http://en.morningtec.cn/stella" target="_blank"><code>StellaSDK</code></a></strong></p>
+<pre><code>项目职务:
+        软件工程师
+所在公司:
+        YEECCO
+项目描述:
+        StellaSDK为移动APP开发提供了一套跨平台的解决方案.
+项目职责:
+        1. 开发StellaRunTime中的libObj2s
+        2. 开发StellaRunTime中的libDispatch
+        3. 开发StellaKit中的NavigationController和NavigationBar
+项目业绩:
+        1. 完成StellaRunTime中libObj2s的开发
+        2. 完成StellaRunTime中libDispatch的开发
+        3. 完成StellaKit中NavigationController NavigationBar的开发</code></pre>
+<p><strong>2013.02 - 2013.04 <code>CardUpForIOS</code></strong></p>
+<pre><code>项目职务:
+        软件工程师
+所在公司:
+        YEECCO
+项目描述:
+        跟法国创业团队合作的项目;
+        `CardUp`的设计理念是`一次分享 永久更新`;
+        它为商务人士提供了最佳的电子名片分享体验, 只需分享一次, 信息永久更新.
+项目职责:
+        1. 设计客户端缓存数据库
+        2. 设计基于JSON的请求协议
+        3. 开发客户端
+项目业绩:
+        1. 完成客户端缓存数据库设计
+        2. 完成请求协议设计
+        3. 完成客户端开发</code></pre>
+<p><strong>2011.04 - 2012.12 <a href="http://122.194.14.89:8088/bssframe" target="_blank"><code>联通BSS系统</code></a></strong></p>
+<pre><code>项目职务:
+        研发工程师
+所在公司:
+        亚信联创
+项目描述:
+        联通BSS系统的子系统与子模块.
+项目职责:
+        CRM1和CRM3新需求的开发
+项目业绩:
+        1. 完成iPhone合约功能的开发
+        2. 完成银联支付验证接口的开发
+        3. 完成资料管理系统的开发
+        4. 完成产品配置系统的开发
+        5. 完成联通空中营业厅App通信模块的开发</code></pre>
+<p><strong>2011.02 - 2011.04 <code>电子商务网上购物系统</code></strong></p>
+<pre><code>项目职务:
+        开发工程师
+所在公司:
+        达内科技
+项目描述:
+        网上购物系统, 采用基于struts1二次开发的smartStruts, 使用自定义的JDBC池连接数据库.
+项目职责:
+        开发登录模块, 购物车模块, 核心订单管理模块
+项目业绩:
+        完成登录模块, 购物车模块, 核心订单管理模块的开发</code></pre>
+<p><strong>2010.10 - 2010.12 <code>3G订票App</code></strong></p>
+<pre><code>项目职务:
+        开发工程师
+所在公司:
+        达内科技
+项目描述:
+        3G订票Android App; 能航班查询, 订票, 订单管理, 订单支付, 网点查询, 会员积分查询, 动态航班查询, 订阅消息等功能.
+项目职责:
+        完成航班查询模块, 机票预订模块, 订单管理模块
+项目业绩:
+        完成航班查询模块, 机票预订模块, 订单管理模块</code></pre>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>教育经历:</h3>
+<hr>
+<p><strong>2007.09 - 2011.06 <a href="http://www.sdau.edu.cn/" target="_blank"><code>山东农业大学</code></a></strong></p>
+<pre><code>专业:    网络工程
+学历:    本科
+是否统招: 是</code></pre>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>语言能力:</h3>
+<hr>
+<p>英语、普通话</p>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>自我评价:</h3>
+<hr>
+<p>具有较强的组织能力, 动手能力和语言表达能力, 富有团队精神, 具有较强的逻辑思维能力;<br>用自觉端正态度, 用学习积累经验;<br>能用积极的行动去感染别人.</p>
+<h3><a class="anchor" href="chrome-extension://efalomlklhakojjbdfehfkgoicablooc/preview.html#a-:" name="a-:"></a>附加信息:</h3>
+<hr>
+<p>证书:
+    <a href="http://img1.ph.126.net/lTnads8DXkx2VTBo60Diqg==/2046886030740020710.jpg" target="_blank"><code>系统分析师</code></a>
+    <a href="http://img0.ph.126.net/s5q_DeIbV7_Il6T0GdklbA==/3281435278592863269.jpg" target="_blank"><code>高级软件工程师</code></a>
+    <a href="http://img0.ph.126.net/Dx2ulOJ1o-vcs9U6lPNWHw==/124974889759587201.jpg" target="_blank"><code>高级数据库管理工程师</code></a></p>
+</div><div style="background-color: rgb(119, 119, 119); height: 1px; left: 0px; position: fixed; top: 0px; width: 100%; background-position: initial initial; background-repeat: initial initial;"></div></body></html>
